@@ -39,5 +39,4 @@ RUN pip2 install mecab-python
 ADD ./vimrc /home/jovyan/.vimrc
 ADD ./sitecustomize.py /usr/lib/python2.7/sitecustomize.py
 
--
 
