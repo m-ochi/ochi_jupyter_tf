@@ -1,6 +1,7 @@
 FROM jupyter/tensorflow-notebook:latest
 
 MAINTAINER m-ochi <masanao.oochi@gmail.com>
+USER root
 
 RUN apt-get update
 RUN apt-get install aptitude
