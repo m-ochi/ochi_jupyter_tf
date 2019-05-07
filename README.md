@@ -10,5 +10,5 @@ jupyter notebookにMeCab neolog-dをつけたものです．
 1. `docker-compose build --no-cache` 15分くらいかかる
 1. `docker-compose up -d`
 1. `docker-compose exec jupyterlab bash` ログインしてパッケージ等入れたい場合
-1. 
+1. http://localhost:8888 にブラウザでアクセス
 
