@@ -1,6 +1,8 @@
 ## データ分析向け，jupyter docker 環境
 jupyter notebookにMeCab neolog-dをつけたものです．
 以下のコマンドを打ち込むだけで快適な分析環境が構築済みのjupyter環境を自動で実行できるようにするのが目的です
+docker-composeを利用しています．
+macの場合はdockerをインストールすると自動でdocker-composeコマンドもインストールされているはずです
 
 その他皆さん共通のパッケージ等ありそうでしたらDockerfileに記述し，プルリクいただければと思います．
 サーバ上でのポート等競合がある場合にはdocker-compose.yml内のport部分のホスト側のポートを変更してください
