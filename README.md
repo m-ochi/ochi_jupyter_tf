@@ -9,7 +9,7 @@ macの場合はdockerをインストールすると自動でdocker-composeコマ
 サーバへsshのポートフォワード経由でアクセスする場合にはローカルマシン側に設定が必要です．
 
 #### やり方
-1. byobu内でgit clone して落としたディレクトリに移動
+1. git clone して落としたディレクトリに移動
 1. `docker-compose build --no-cache` 15分くらいかかる
 1. `docker-compose up -d`
 1. `docker-compose exec jupyterlab bash` ログインしてパッケージ等入れたい場合
