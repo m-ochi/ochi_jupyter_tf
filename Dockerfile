@@ -31,13 +31,15 @@ ADD ./mecabrc /etc/mecabrc
 
 #RUN aptitude install -y python-mecab
 #RUN aptitude install -y mecab-python3
-RUN pip install networkx
-RUN pip install python-louvain
-RUN pip install numpy
-RUN pip install requests
-RUN pip install ipython
-RUN pip install plyvel
-RUN pip install mecab-python3
+RUN pip3 install networkx
+RUN pip3 install python-louvain
+RUN pip3 install numpy
+RUN pip3 install requests
+RUN pip3 install ipython
+RUN pip3 install plyvel
+RUN pip3 install mecab-python3
+RUN pip3 install keras
+RUN pip3 install tensorflow
 ADD ./vimrc /home/jovyan/.vimrc
 #ADD ./sitecustomize.py /usr/lib/python2.7/sitecustomize.py
 
