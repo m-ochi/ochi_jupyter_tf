@@ -17,11 +17,12 @@ services:
       GRANT_SUDO: "yes"
     # コンテナの/jobyan/work以下をホストの./workにおいてデータ永続化する。
     volumes:
-       - ~/Documents/dockerimages/jupyter-tf/ipnbs/:/home/jovyan/work/
+#       - ~/Documents/dockerimages/jupyter-tf/ipnbs/:/home/jovyan/work/
+       - /mnt/seagate8t0/m-ochi/ochi_jupyter_tf/ipnbs/:/home/jovyan/work/
     privileged: true
     # (ホストポート:コンテナポート)
     ports:
-      - "8888:8888"
+      - "8989:8888"
     restart: unless-stopped
     # パスワード設定などとりあえずめんどくさいのでtokenを空にしてすぐ使えるようにする。
     # (起動テスト用なので実際にはパスワードなどを設定してください)
