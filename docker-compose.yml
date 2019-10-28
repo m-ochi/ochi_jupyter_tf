@@ -7,7 +7,7 @@ services:
     # JupyterLabが既にインストール済。
     # pipで何か追加したい場合などはDockerfileを書く。
     build: ./
-    container_name: jupyterlab_tf
+#    container_name: jupyterlab_tf
 #    image: jupyter/tensorflow-notebook:latest
     user: root
     # URLに書いてある設定を読んで以下のenvironmentを書く。
@@ -17,10 +17,11 @@ services:
       GRANT_SUDO: "yes"
     # コンテナの/jobyan/work以下をホストの./workにおいてデータ永続化する。
     volumes:
-#       - ~/Documents/dockerimages/jupyter-tf/ipnbs/:/home/jovyan/work/
-       - /mnt/seagate8t0/m-ochi/ochi_jupyter_tf/ipnbs/:/home/jovyan/work/
+       - ./:/home/jovyan/work/
     privileged: true
     # (ホストポート:コンテナポート)
+    # http://localhost:8888でアクセス．変えたい場合はホスト側のポートを変更してください
+    # サーバ等でポートフォワードを行いたい場合は記述をローカル側の~.ssh/configに記述してください
     ports:
       - "8989:8888"
     restart: unless-stopped

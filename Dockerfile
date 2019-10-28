@@ -20,7 +20,6 @@ RUN update-locale LANGUAGE=ja_JP.UTF-8
 #ENV LC_ALL=ja_JP.UTF-8
 #ENV LANGUAGE=ja_JP.UTF-8
 
-RUN aptitude install -y python-pip
 RUN aptitude install -y python3-pip
 RUN aptitude install -y vim
 RUN aptitude install -y mecab libmecab-dev mecab-ipadic-utf8
@@ -30,27 +29,15 @@ RUN ./bin/install-mecab-ipadic-neologd -n -y
 WORKDIR ../
 ADD ./mecabrc /etc/mecabrc
 
-RUN aptitude install -y python-mecab
-RUN pip2 install networkx
-RUN pip2 install python-louvain
-RUN pip2 install numpy
-RUN pip2 install requests
-RUN pip2 install ipython
-RUN pip2 install plyvel
-RUN pip2 install mecab-python
-RUN pip2 install neologdn
-RUN pip  install plotly
-RUN pip  install psutil
-RUN pip  install gensim
-RUN pip  install neologdn
-RUN npm install plotly.js-dist
-RUN npm install -g n
-RUN npm latest
-RUN npm install -g electron --unsafe-perm=true --allow-root
-RUN aptitude install libxtst6
-RUN aptitude install xvfb
-RUN jupyter labextension install @jupyterlab/plotly-extension
+RUN pip3 install networkx
+RUN pip3 install python-louvain
+RUN pip3 install numpy
+RUN pip3 install requests
+RUN pip3 install ipython
+RUN pip3 install plyvel
+RUN pip3 install mecab-python3
+RUN pip3 install keras
+RUN pip3 install tensorflow
 ADD ./vimrc /home/jovyan/.vimrc
-ADD ./sitecustomize.py /usr/lib/python2.7/sitecustomize.py
 
 
